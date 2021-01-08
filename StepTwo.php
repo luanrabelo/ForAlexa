@@ -42,44 +42,46 @@ $key_user	= randString(25);
 $now 		= date_create()->format('Y-m-d');	 	
 $sqli		= ("INSERT INTO `User` (`user`, `date`, `key_user`) VALUES ('$Email', '$now', '$key_user')");	
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(3);
+sleep(2);
 				   
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `key_user`) VALUES ('LaunchRequest', 'Welcome, you can say Hello or Help. Which would you like to try', '$key_user')");
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(3);	
+sleep(2);	
 				   
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `key_user`) VALUES ('HelpIntent', 'You can say hello to me! How can I help?', '$key_user')");
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(3);
+sleep(2);
 				   
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `key_user`) VALUES ('CancelAndStopIntent', 'Goodbye!', '$key_user')");
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(3);
+sleep(2);
 				   
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `key_user`) VALUES ('FallbackIntent', 'Sorry, I don\'t know about that. Please try again.', '$key_user')");
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(3);
+sleep(2);
 				   
-$sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `key_user`) VALUES ('IntentReflector', 'You just triggered ', '$key_user')");
+$sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `key_user`) VALUES ('IntentReflector', 'You just triggered', '$key_user')");
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(3);
+sleep(2);
 				   
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `key_user`) VALUES ('Error', 'Sorry, I had trouble doing what you asked. Please try again.', '$key_user')");
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(3);
+sleep(2);
 				   
-$sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `key_user`) VALUES ('HelloWorldIntent', 'Welcome, you can say Hello or Help. Which would you like to try', '$key_user')");	
+$sqli		= ("INSERT INTO `Questions` (`IntentName`, `question_1`, `answer`, `key_user`) VALUES ('HelloWorldIntent', 'hello word', 'Welcome, you can say Hello or Help. Which would you like to try', '$key_user')");	
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(3);
+sleep(2);
 				   
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `key_user`) VALUES ('AMAZON.YesIntent', 'Yes?', '$key_user')");	
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(3);	
+sleep(2);	
 				   
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `key_user`) VALUES ('AMAZON.NoIntent', 'No?', '$key_user')");	
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));		
-sleep(3);
+sleep(2);
 
+				   
+				   
 print '<meta http-equiv="refresh" content="4;url=index.php?p=StepTree&key='."$key_user".'"/>';				   
 }
 ?>
