@@ -18,43 +18,6 @@ return $delete;
 } 
 ?>
 
-<div aria-live="polite" aria-atomic="true" style="position: relative;">
-  <!-- Position it -->
-<div style="position: absolute; top: 0; right: 0; z-index: 9999">
-
-<!-- Intent -->
-<div class="toast Toast_Intent" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
-<div class="toast-header mb-0 text-white" style="background-color: black">
-<i class="fas fa-2x fa-question-circle"></i>
-<strong class="ml-1"> ForAlexa Intent Help</strong>
-<small class="ml-4">just now</small>
-<button type="button" class="ml-2 mb-0 close close_intent" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-</div>
-<div class="toast-body">Aqui você pode cadastrar as Intenções, que podem ser Perguntas e Respostas ou Frases Aleatórias. consulte o Tutorial para mais informações</div>
-</div>
-<!-- Fim Intent -->
-
-</div>
-</div>
-
-
-<script>
-$(document).ready(function(){
-  $("#btn").click(function(){
-	$('.Toast_Intent').toast({delay: 5000});  
-    $('.Toast_Intent').toast('show');
-});
-	
-  $("#myHideBtn").click(function(){
-    $('.toast').toast('hide');
-  });
-	
-$("#close_intent").click(function(){
-    $('.Toast_Intent').toast('dispose');
-  });
-});
-</script>	
-</script>
 
 <?php
 $query 			= "SELECT * FROM `Questions` WHERE key_user = '$key'";
@@ -214,8 +177,8 @@ while ($row = $result->fetch_assoc()) {
   </div>
 </div>	
 </div>	
-<div class="col"><a class="btn btn-lg btn-primary" href="json.php?key=<?php echo($key);?>" role="button">json File</a></div>
-<div class="col"><a class="btn btn-lg btn-primary" href="index.php?p=MakeSkill&key=<?php echo($key);?>" role="button">Code Alexa</a></div>	
+<div class="col"><a class="btn btn-lg btn-primary text-white" href="json.php?key=<?php echo($key);?>" role="button">json File</a></div>
+<div class="col"><a class="btn btn-lg btn-primary text-white" href="index.php?p=MakeSkill&key=<?php echo($key);?>" role="button">Code Alexa</a></div>	
 </div>
 <div class="text-center mb-5 text-white">
 <div>You have <button type="button" class="btn btn-primary"><span class="badge badge-light"><?php echo($num_rows); ?></span></button> Intents registered</div>	
