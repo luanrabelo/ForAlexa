@@ -1,4 +1,5 @@
 <?php
+include("Connection.php");
 $Email = $_POST["email"];
 	
 $search 	= mysqli_query($mysqli, "SELECT * FROM `User` WHERE user = '$Email'");
