@@ -1,8 +1,7 @@
 <?php
-//Conexão com o Banco de Dados
+// Connection with BD
 include("Connection.php");
 
-// 
 $iphone 		= strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
 $ipad 			= strpos($_SERVER['HTTP_USER_AGENT'],"iPad");
 $android 		= strpos($_SERVER['HTTP_USER_AGENT'],"Android");
@@ -17,8 +16,7 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian || $
 ?>
 <!doctype html>
 <html>
-<head>
-<script src="https://www.google.com/recaptcha/api.js"></script>	
+<head>	
 <meta charset="UTF-8">
 <title>ForAlexa - Skill Building</title>
 <link rel="icon" type="image/png" href="img/logo.jpg" />	
@@ -44,17 +42,19 @@ text-decoration: none;
 }
 a:hover {
 color: white;
-text-decoration: underline;	
+text-decoration: none;	
 }	
-	
+.fa-2x {
+vertical-align: middle;
+}	
 </style>	
 </head>
 
 <body class="text-center text-monospace w-100 bg-dark h-100">	
 <div class="container mx-auto">	
 <header class="mt-2 text-white">
-<div class="mb-2"><h1>ForAlexa</h1></div>	
-<div class="row text-truncate text-center ml-0 mr-0">
+<div class="mb-5"><h1>ForAlexa</h1></div>	
+<div class="row text-truncate text-center mx-auto">
 <div class="col-2"><a href="index.php"><i class="fas fa-2x fa-home"></i><?php if($device == "PC") {echo(" Home");}?></a></div>
 <div class="col-2"><a href="index.php?p=Tutorial"><i class="fas fa-2x fa-chalkboard-teacher"></i><?php if($device == "PC") {echo(" Tutorial");}?></a></div>
 <div class="col-2"><a href="https://github.com/luanrabelo/ForAlexa" target="_blank"><i class="fab fa-2x fa-github"></i><?php if($device == "PC") {echo(" GitHub");}?></a></div>
@@ -95,7 +95,7 @@ include("home.php");
 </main>	
 	
 <footer class="text-white mt-5 mb-5 mx-auto">
-<div><p>Last Update: 07/01/2021 | Version 0.8.1 beta</p></div>
+<div><p>Last Update: 14/01/2021 | Version 0.8.4 beta</p></div>
 </footer>	
 </div>	
 </body>

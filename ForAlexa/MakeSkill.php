@@ -238,7 +238,7 @@ $code	.=	"\t".".lambda();"."\r\n";
 
 ?>
 
-<div class="mt-5 mx-auto text-black ml-5 mr-5">
+<div class="mt-5 mx-auto text-black ml-5 mr-5 mb-5">
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb">
 <?php
@@ -253,6 +253,7 @@ while ($row = $result->fetch_assoc()) {
 </ol>
 </nav>	
 </div>
+<?php include("ads.php");?>
 <div class="text-white mt-5 mb-3"><h2>Code Alexa</h2></div>
 <small class="text-center text-white mt-3 mb-5">Copy source code and past in Amazon Developer Console</small>
 <script>

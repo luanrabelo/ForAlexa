@@ -8,9 +8,9 @@ if($num_rows > 0){
 ?>	
 <div class="text-center text-white mt-5 mx-auto">
 <div class="mt-3 mb-3"><h4><?php echo($Email);?></h4></div>
-<div>You have a database</div>
-<div>Loading, please wait...</div>	
-<img src="img/loading.gif" width="25%" height="25%">
+<div class="text-center">You have a database</div>
+<div class="text-center">Loading, please wait...</div>	
+<img src="img/loading.gif" width="35%" height="35%">
 </div>
 <?php
 $result = $mysqli->query("SELECT * FROM `User` WHERE user = '$Email'");
@@ -25,8 +25,8 @@ if($num_rows <= 0){
 ?>
 <div class="text-center text-white mt-5 mx-auto">
 <div class="mt-3 mb-3"><h4><?php echo($Email);?></h4></div>
-<div>You don't have a database</div>
-<div>Creating a database, please wait...</div>	
+<div class="text-center">You don't have a database</div>
+<div class="text-center">Creating a database, please wait...</div>	
 <img src="img/loading.gif" width="25%" height="25%">
 </div>
 <?php
@@ -80,8 +80,6 @@ sleep(2);
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `key_user`) VALUES ('AMAZON.NoIntent', 'No?', '$key_user')");	
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));		
 sleep(2);
-
-				   
 				   
 print '<meta http-equiv="refresh" content="4;url=index.php?p=StepTree&key='."$key_user".'"/>';				   
 }

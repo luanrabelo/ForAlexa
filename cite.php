@@ -1,1 +1,0 @@
-<div class="text-white w-75 mx-auto text-justify mt-5">Cite For Alexa</div>
