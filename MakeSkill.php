@@ -195,7 +195,7 @@ while ($rowq 	= $resultq->fetch_assoc()) {
 $codeRQ	=	$rowq["RandomFacts"];	
 for ($i = 1; $i <= $codeRQ; $i++) {
 $rd		.= "const a".$i." = a[Math.floor(Math.random() * a.length)];"."\r\n";
-$sp 	.= "a".$i."+";
+$sp 	.= "a".$i." + "."'".'<break time="0.5s" />'."'"." + ";
 }}
 $code	.= $rd;	
 unset($rd);	
@@ -216,7 +216,7 @@ $code	.=	"exports.handler = Alexa.SkillBuilders.custom()"."\r\n";
 $code	.=	"\t".".addRequestHandlers("."\r\n";
 $code	.=	"\t\t"."LaunchRequestHandler,"."\r\n";
 $code	.=	"\t\t"."HelloWorldIntentHandler,"."\r\n";
-$query 			= "SELECT * FROM `Questions` WHERE key_user = '$key' and IntentName != 'AMAZON.YesIntent' and IntentName != 'AMAZON.NoIntent'";
+$query 			= "SELECT * FROM `Questions` WHERE key_user = '$key' and IntentName != 'AMAZON.YesIntent' and IntentName != 'AMAZON.NoIntent' and IntentName != 'LaunchRequest' and IntentName != 'HelloWorldIntent' and IntentName != 'HelpIntent' and IntentName != 'CancelAndStopIntent' and IntentName != 'FallbackIntent' and IntentName != 'IntentReflector' and IntentName != 'Error'";
 $result 		= $mysqli->query($query);
 while ($row 	= $result->fetch_assoc()) {	
 $code	.=	"\t\t".$row["IntentName"]."Handler,"."\r\n";		
