@@ -47,10 +47,13 @@ text-decoration: none;
 .fa-2x {
 vertical-align: middle;
 }	
+body { 
+font-family: Segoe UI;
+}
 </style>	
 </head>
 
-<body class="text-center text-monospace w-100 bg-dark h-100">	
+<body class="text-center w-100 bg-dark h-100">	
 <div class="container mx-auto">	
 <header class="mt-2 text-white">
 <div class="mb-5"><h1>ForAlexa</h1></div>	
@@ -60,7 +63,7 @@ vertical-align: middle;
 <div class="col-2"><a href="https://github.com/luanrabelo/ForAlexa" target="_blank"><i class="fab fa-2x fa-github"></i><?php if($device == "PC") {echo(" GitHub");}?></a></div>
 <div class="col-2"><a href="index.php?p=CiteForAlexa"><i class="fas fa-2x fa-scroll"></i><?php if($device == "PC") {echo(" How to cite");}?></a></div>
 <div class="col-2"><a href="index.php?p=About"><i class="fas fa-2x fa-address-card"></i><?php if($device == "PC") {echo(" About");}?></a></div>
-<div class="col-2"><a href="index.php?p=Donate" target="_blank"><i class="fas fa-2x fa-hand-holding-usd"></i><?php if($device == "PC") {echo(" Donate");}?></a></div>	
+<div class="col-2"><a href="index.php?p=Donate"><i class="fas fa-2x fa-hand-holding-usd"></i><?php if($device == "PC") {echo(" Donate");}?></a></div>	
 </div>
 </header>	
 
