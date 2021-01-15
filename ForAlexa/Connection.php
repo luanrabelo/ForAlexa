@@ -1,8 +1,8 @@
 <?php
-$bd			= ""; 	// BD Name
-$user 		= ""; 	// User
-$pass	 	= ""; 	// Pass
-$host 		= "";	// Host
+$bd         = ""; 	// BD Name
+$user       = ""; 	// User
+$pass       = ""; 	// Pass
+$host       = "";	// Host
 
 $mysqli = @mysqli_connect($host, $user, $pass, $bd);
 if (mysqli_connect_error()) {
