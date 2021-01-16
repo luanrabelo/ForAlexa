@@ -6,8 +6,8 @@
 <div class="input-group-prepend"><div class="input-group-text"><i class="fas fa-2x fa-at"></i></div></div>
 <input name="email" type="email" autofocus="autofocus" required="required" class="w-75 form-control form-control-lg mx-auto" id="email" placeholder="" autocomplete="off" aria-describedby="emailHelp">
 </div>
-<div style="vertical-align: middle;">	
-<small id="emailHelp" class="text-white mb-5"><i style="color: yellow; vertical-align: middle;" class="fas fa-2x fa-exclamation-triangle mt-2"></i> Email is required!</small>
+<div class="mt-3">	
+<small id="emailHelp" class="text-white mb-5"><i style="color: yellow;" class="fas fa-2x fa-exclamation-triangle"></i> Email is required!</small>
 </div>
 <button class="btn btn-success btn-lg btn-block mt-5 mx-auto mb-5" type="submit">Login</button>
 </div>

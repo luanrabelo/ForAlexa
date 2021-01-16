@@ -44,11 +44,15 @@ a:hover {
 color: white;
 text-decoration: none;	
 }	
+.fa-3x {
+vertical-align: middle;
+}	
 .fa-2x {
 vertical-align: middle;
 }	
 body { 
 font-family: Segoe UI;
+letter-spacing: 1.5px;
 }
 </style>	
 </head>
@@ -56,14 +60,14 @@ font-family: Segoe UI;
 <body class="text-center w-100 bg-dark h-100">	
 <div class="container mx-auto">	
 <header class="mt-2 text-white">
-<div class="mb-5"><h1>ForAlexa</h1></div>	
+<div class="mb-5"><img src="img/ForAlexaLogo.png" width="50%" height="50%"></div>	
 <div class="row text-truncate text-center mx-auto">
-<div class="col-2"><a href="index.php"><i class="fas fa-2x fa-home"></i><?php if($device == "PC") {echo(" Home");}?></a></div>
-<div class="col-2"><a href="index.php?p=Tutorial"><i class="fas fa-2x fa-chalkboard-teacher"></i><?php if($device == "PC") {echo(" Tutorial");}?></a></div>
-<div class="col-2"><a href="https://github.com/luanrabelo/ForAlexa" target="_blank"><i class="fab fa-2x fa-github"></i><?php if($device == "PC") {echo(" GitHub");}?></a></div>
-<div class="col-2"><a href="index.php?p=CiteForAlexa"><i class="fas fa-2x fa-scroll"></i><?php if($device == "PC") {echo(" How to cite");}?></a></div>
-<div class="col-2"><a href="index.php?p=About"><i class="fas fa-2x fa-address-card"></i><?php if($device == "PC") {echo(" About");}?></a></div>
-<div class="col-2"><a href="index.php?p=Donate"><i class="fas fa-2x fa-hand-holding-usd"></i><?php if($device == "PC") {echo(" Donate");}?></a></div>	
+<div class="col-2"><a href="index.php"><i class="fas fa-3x fa-home"></i><?php if($device == "PC") {echo(" Home");}?></a></div>
+<div class="col-2"><a href="index.php?p=Tutorial"><i class="fas fa-3x fa-chalkboard-teacher"></i><?php if($device == "PC") {echo(" Tutorial");}?></a></div>
+<div class="col-2"><a href="https://github.com/luanrabelo/ForAlexa" target="_blank"><i class="fab fa-3x fa-github"></i><?php if($device == "PC") {echo(" GitHub");}?></a></div>
+<div class="col-2"><a href="index.php?p=CiteForAlexa"><i class="fas fa-3x fa-scroll"></i><?php if($device == "PC") {echo(" How to cite");}?></a></div>
+<div class="col-2"><a href="index.php?p=About"><i class="fas fa-3x fa-address-card"></i><?php if($device == "PC") {echo(" About");}?></a></div>
+<div class="col-2"><a href="index.php?p=Donate"><i class="fas fa-3x fa-hand-holding-usd"></i><?php if($device == "PC") {echo(" Donate");}?></a></div>	
 </div>
 </header>	
 
