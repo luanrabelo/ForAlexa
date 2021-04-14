@@ -1,0 +1,45 @@
+a{
+color: white;
+}	
+a:link {
+color: white;
+text-decoration: none;	
+}
+a:hover {
+color: blue;
+text-decoration: none;	
+}	
+.fa-3x {
+vertical-align: middle;
+}	
+.fa-2x {
+vertical-align: middle;
+}	
+body { 
+font-family: Segoe UI;
+letter-spacing: 1.5px;
+}
+.Amazon{
+background-color: #146eb4;
+color: white;	
+}
+.Facebook{
+background-color: #3b5998;
+color: white;
+}
+.Twitter{
+background-color: #1da1f2;
+color: white;
+}	
+.Google{
+background-color: #ea4335;
+color: white;
+}
+.Microsoft{
+background-color: #f65314;
+color: white;
+}	
+.GitHub{
+background-color: #24292e;
+color: white;
+}	
