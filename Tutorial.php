@@ -1,42 +1,20 @@
-<ul class="nav nav-tabs justify-content-center" role="tablist" id="Instructions">
-	
-<li class="nav-item">
-<a class="nav-link mt-5" href="#CreateSkill" role="tab" data-toggle="tab">Creating Skill</a>
-</li>
-<li class="nav-item">
-<a class="nav-link mt-5" href="#Intent" role="tab" data-toggle="tab">ForAlexa create Intent</a>
-</li>
-<li class="nav-item">
-<a class="nav-link mt-5" href="#JsonFile" role="tab" data-toggle="tab">Get and Import json file</a>
-</li>
-<li class="nav-item">
-<a class="nav-link mt-5" href="#CodeAlexa" role="tab" data-toggle="tab">Code Alexa</a>
-</li>	
-<li class="nav-item">
-<a class="nav-link mt-5" href="#TesteSkill" role="tab" data-toggle="tab">Test Skill</a>
-</li>	
-</ul>
-
-	
-<div class="tab-content text-center mx-auto">		
-<div role="tabpanel" id="CreateSkill" class="tab-pane fade show active text-white mt-3">
-<div><video width="854" height="480" src="Tutorial/CreatingSkill.mov" controls="controls" class="mx-auto"></video></div>	
-</div>
-	
-<div role="tabpanel" id="Intent" class="tab-pane fade text-white mt-3">
-<div><video width="854" height="480" src="Tutorial/Intent.mov" controls="controls" class="mx-auto"></video></div>	
-</div>
-	
-<div role="tabpanel" id="JsonFile" class="tab-pane fade text-white mt-3">
-<div><video width="854" height="480" src="Tutorial/JsonFile.mov" controls="controls" class="mx-auto"></video></div>	
-</div>
-	
-<div role="tabpanel" id="CodeAlexa" class="tab-pane fade text-white mt-3">
-<div><video width="854" height="480" src="Tutorial/CodeAlexa.mov" controls="controls" class="mx-auto"></video></div>	
-</div>
-	
-<div role="tabpanel" id="TesteSkill" class="tab-pane fade text-white mt-3">
-<div><video width="854" height="480" src="Tutorial/TesteSkill.mov" controls="controls" class="mx-auto"></video></div>	
+<h1 class="mt-3 text-white">Alexa Tutorial</h1>
+<div class="row row-cols-1 mt-5">
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=5s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>1. Github</a></div>	
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=95s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>2. Access</a></div>
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=130s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>3. Developer registry</a></div>	
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=170s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>4. Password Recovery</a></div>	
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=235s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>5. Login </a></div>	
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=265s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>6. Repositories</a></div>	
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=346s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>7. Creating a Skill</a></div>	
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=386s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>8. LaunchRequest and welcome message</a></div>	
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=467s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>9. Registering New Intents (QA)</a></div>	
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=757s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>10. Registering New Intents (RQ)</a></div>
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=1028s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>11. Json File</a></div>
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=1055s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>12. Amazon Developer Console</a></div>
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=1205s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>13. Import json file</a></div>
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=1301s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>14. Alexa code</a></div>
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=1372s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>15. Skill testing</a></div>
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=1524s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>16. Skill beta</a></div>
+<div class="col-sm-4 mt-2 mb-2"><a class="btn btn-lg btn-block btn-primary text-left" href="https://www.youtube.com/watch?v=T0FMKwFIRZ0&t=1916s" target="_blank" role="button"><i class="fab fa-youtube mr-2"></i>17. Navigation menu ForAlexa</a></div>	
 </div>	
-</div>	
-
