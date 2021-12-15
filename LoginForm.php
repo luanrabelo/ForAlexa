@@ -1,13 +1,3 @@
-<div id="ErrorLogin">		
-<div class="alert alert-danger alert-dismissible" role="alert">
-<div><?php echo($ErrorLogin);?></div>
-<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-<span aria-hidden="true">&times;</span>
-</button>
-</div>
-</div>
-
-
 <div class="modal fade" tabindex="-1" id="FormLoading">
 <div class="modal-dialog modal-dialog-centered">
 <div class="modal-content">
@@ -20,6 +10,75 @@
 <div><div></div><div></div><div></div></div><div><div></div><div></div><div></div></div>
 </div></div>
 <style type="text/css">
+/* for lg */
+
+.custom-switch.custom-switch-lg .custom-control-label {
+    padding-left: 3rem;
+    padding-bottom: 2rem;
+}
+
+.custom-switch.custom-switch-lg .custom-control-label::before {
+    height: 2rem;
+    width: calc(3rem + 0.75rem);
+    border-radius: 4rem;
+}
+
+.custom-switch.custom-switch-lg .custom-control-label::after {
+    width: calc(2rem - 4px);
+    height: calc(2rem - 4px);
+    border-radius: calc(3rem - (2rem / 2));
+}
+
+.custom-switch.custom-switch-lg .custom-control-input:checked ~ .custom-control-label::after {
+    transform: translateX(calc(2rem - 0.25rem));
+}
+	
+.Recover{
+animation: pulseCat 0.7s infinite;	
+}
+@keyframes pulseCat {
+10% {
+box-shadow: 0 0 0 0 darkblue;
+}
+80% {
+box-shadow: 0 0 0 25px rgba(204, 169, 44, 0);
+}	
+100% {
+box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+}
+}	
+	
+.Assistence{
+animation: pulseCat 0.7s infinite;	
+}
+@keyframes pulseCat {
+10% {
+box-shadow: 0 0 0 0 white;
+}
+80% {
+box-shadow: 0 0 0 25px rgba(204, 169, 44, 0);
+}	
+100% {
+box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+}
+}		
+	
+.Login{
+animation: pulseCat 0.7s infinite;	
+}
+@keyframes pulseCat {
+10% {
+box-shadow: 0 0 0 0 darkblue;
+}
+80% {
+box-shadow: 0 0 0 25px rgba(204, 169, 44, 0);
+}	
+100% {
+box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+}
+}		
+	
+	
 @keyframes ldio-entgl9wkzda-1 {
     0% { transform: rotate(0deg) }
    50% { transform: rotate(-45deg) }
@@ -96,27 +155,73 @@
 </div>
 </div>
 
-<div class="text-center text-white"><h1>Login</h1></div>
-<div class="row mt-3 justify-content-sm-center">
-<div class="col-sm-6"><button class="btn btn-lg btn-block btn-dark LoginC" type="button" data-toggle="collapse" data-target="#LoginC" aria-expanded="false" aria-controls="LoginC">Login with Email</button></div>
-<!--<div class="col-sm-5"><button class="btn btn-lg btn-block btn-dark Social" type="button" data-toggle="collapse" data-target="#Social" aria-expanded="false" aria-controls="Social">Social Media (beta)</button></div>-->
+
+<div id="TipsPassword" class="alert alert-warning alert-dismissible fade show mx-auto w-75 mt-5" role="alert">
+<div class="mx-auto w-100 h6">
+	<button id="PreviousPass" type="button" class="mr-2 btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Previous Tips">
+		<i class="fas fa-chevron-left"></i>
+	</button>
+	<i style="color: black;" class="fas fa-2x fa-lightbulb mr-2"></i><?php echo($TipsPassword);?>
+	<button id="NextPass" type="button" class="ml-2 btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Next Tips">
+		<i class="fas fa-chevron-right"></i>
+	</button>
+</div>	
+<button id="FecharRecover" type="button" class="close" data-dismiss="alert" aria-label="Close"><span style="color: black;" aria-hidden="true">&times;</span></button>
+</div>	
+
+
+<div id="TipsSignUp" class="alert alert-warning alert-dismissible fade show mx-auto w-75 mt-5" role="alert">
+<div class="mx-auto w-100 h6">
+	<button id="PreviousSignUp" type="button" class="mr-2 btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Previous Tips">
+		<i class="fas fa-chevron-left"></i>
+	</button>
+	<i style="color: black;" class="fas fa-2x fa-lightbulb mr-2"></i><?php echo($TipsSignUp);?>
+	<button id="NextSignUp" type="button" class="ml-2 btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Next Tips">
+		<i class="fas fa-chevron-right"></i>
+	</button>
+</div>	
+<button id="FecharCadastro" type="button" class="close" data-dismiss="alert" aria-label="Close"><span style="color: black;" aria-hidden="true">&times;</span></button>
+</div>	
+
+
+<div id="TipsAssistance" class="alert alert-warning alert-dismissible fade show mx-auto w-75 mt-5" role="alert">
+<div class="mx-auto w-100 h6">
+	<button id="PreviousAssistance" type="button" class="mr-2 btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Previous Tips">
+		<i class="fas fa-chevron-left"></i>
+	</button>
+	<i style="color: black;" class="fas fa-2x fa-lightbulb mr-2"></i><?php echo($TipsAssistance);?>
+	<button id="NextAssistance" type="button" class="ml-2 btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Next Tips">
+		<i class="fas fa-chevron-right"></i>
+	</button>
+</div>	
+<button id="FecharAssistance" type="button" class="close" data-dismiss="alert" aria-label="Close"><span style="color: black;" aria-hidden="true">&times;</span></button>
+</div>	
+
+
+<div class="text-center text-white mt-2 mb-5 h1">Login</div>
+
+
+<div id="ErrorLogin" class="alert alert-danger alert-dismissible mx-auto w-75 mt-5" role="alert">
+<div class="mx-auto w-75 h2"><?php echo($ErrorLogin);?></div>
+<button id="LoginError" type="button" class="close" data-dismiss="alert" aria-label="Close"><span style="color: black;" aria-hidden="true">&times;</span></button>
 </div>
 
-<div class="mx-auto mt-5 mb-5 container collapse" id="LoginC">
+
+<div class="mx-auto mb-2 container">
 <form id="FormLogin">	
 <div class="form-group">
-<label class="text-white">Email Address</label>	
+<label class="text-white h4 mt-2">Email Address</label>	
 <div class="input-group mb-5">	
 <div class="input-group-prepend">	
 <div class="input-group-text"><i class="fas fa-2x fa-at"></i>
 </div>
 </div>
-<input name="Login" type="email" autofocus="autofocus" required="required" class="form-control form-control-lg mx-auto" id="Login" placeholder="<?php echo($LoginEmail);?>" autocomplete="on">
+<input autocomplete="on" name="Login" type="email" autofocus="autofocus" required="required" class="form-control form-control-lg mx-auto" id="Login" placeholder="<?php echo($LoginEmail);?>">
 </div>
 </div>
 
 <div class="form-group">
-<label class="text-white">Password</label>	
+<label class="text-white h4 mt-2">Password</label>	
 <div class="input-group mb-5">	
 <div class="input-group-prepend">	
 <div class="input-group-text"><i class="fas fa-2x fa-key"></i>
@@ -126,33 +231,133 @@
 </div>
 </div>
 	
-<div><button type="submit" class="btn btn-primary btn-lg btn-block mb-5">Sign In<i class="fas fa-2x fa-sign-in-alt ml-2"></i></button></div>
+<div class="form-group">
+<div style="vertical-align: middle;" class="input-group mb-1">	
+<div id="AssistanceP" class="custom-control custom-switch custom-switch-lg mx-auto text-white" data-toggle="tooltip" data-placement="top" title="Assistente Tutorial">
+<input name="Assistance" type="checkbox" class="custom-control-input" id="Assistance" value="YES" checked="checked">
+<label class="custom-control-label h2" for="Assistance"><div id="ON">Assistant ON</div><div id="OFF">Assistant OFF</div></label>
+</div>		
+</div>
+</div>	
+	
+<div id="TipsAssistanceON" class="alert alert-secondary alert-dismissible fade show mx-auto w-100 mb-5" role="alert">
+<div class="mx-auto h6"><?php echo($TipsAssistanceON);?></div>	
+<button id="FecharAssistanceON" type="button" class="close" data-dismiss="alert" aria-label="Close"><span style="color: black;" aria-hidden="true">&times;</span></button>
+</div>	
+	
+	
+<div><button id="SignIn" type="submit" class="btn btn-primary btn-lg btn-block mb-3">Sign In</button></div>
 </form>	
 
 	
 <div class="card-footer bg-white text-dark">
-<div class="row row-cols-1 justify-content-sm-left mt-1">	
-<div class="col-sm-6 mb-1 text-center">Not a ForAlexa member? <a class="btn btn-primary" href="Login.php?p=NewUser" role="button">Sign up ForAlexa</a></div>
-<div class="col-sm-6 mb-1 text-center">Forgot your Password? <a class="btn btn-primary" href="Login.php?p=Recover" role="button">Recover Password</a></div>
+<div class="row row-cols-1 mt-1">	
+<div class="col-6 mb-1 text-center">Not a ForAlexa member? <a id="CadastroForAlexa" class="btn btn-primary" href="Login.php?p=NewUser" role="button">Sign up ForAlexa</a></div>
+<div class="col-6 mb-1 text-center">Forgot your Password? <a id="PassWordRecover" class="btn btn-primary" href="Login.php?p=Recover" role="button">Reset Password</a></div>
 </div>
 </div>	
 </div>	
 
 <script>
 $(document).ready(function(){
+$(function(){
+$('[data-toggle="tooltip"]').tooltip()
+});
+
+$("#SignIn").hover(function(){
+$('#TipsAssistanceON').show();
+});
+
+$('#TipsPassword').hide();
+$('#TipsSignUp').hide();
+$('#TipsAssistance').hide();
+$('#TipsAssistanceON').hide();
+	
+$('#TipsAssistance').show();	
+$("#AssistanceP").addClass("Assistence");
+	
+$("#PreviousPass").click(function(){
+$('#TipsPassword').hide();
+$("#PassWordRecover").removeClass("Recover");
+$('#TipsAssistance').show();
+$("#AssistanceP").addClass("Assistence");
+});
+$("#NextPass").click(function(){
+$('#TipsPassword').hide();
+$("#PassWordRecover").removeClass("Recover");
+$('#TipsSignUp').show();
+$("#CadastroForAlexa").addClass("Login");
+});	
+$("#PreviousSignUp").click(function(){
+$('#TipsSignUp').hide();
+$("#CadastroForAlexa").removeClass("Login");	
+$('#TipsPassword').show();	
+$("#PassWordRecover").addClass("Recover");
+});	
+$("#NextSignUp").click(function(){
+$('#TipsSignUp').hide();
+$("#CadastroForAlexa").removeClass("Login");
+$('#TipsAssistance').show();
+$("#AssistanceP").addClass("Assistence");
+});	
+$("#PreviousAssistance").click(function(){
+$('#TipsAssistance').hide();
+$("#AssistanceP").removeClass("Assistence");	
+$('#TipsSignUp').show();	
+$("#CadastroForAlexa").addClass("Login");
+});		
+$("#NextAssistance").click(function(){
+$('#TipsAssistance').hide();
+$("#AssistanceP").removeClass("Assistence");
+$('#TipsPassword').show();
+$("#PassWordRecover").addClass("Recover");
+});	
+
+	
+	
+$('#Tips').val($(this).is(':checked'));
 $('#ErrorLogin').hide();
+$('#OFF').hide();	
+	
+$("#FecharRecover").click(function(){
+$("#PassWordRecover").removeClass("Recover");
+});	
+	
+$("#FecharCadastro").click(function(){
+$("#CadastroForAlexa").removeClass("Login");
+});
+	
+$("#FecharAssistance").click(function(){
+$("#AssistanceP").removeClass("Assistence");
+});	
+
+$('#Assistance').change(function() {
+if($(this).is(":checked")) {
+console.log("luan");
+$('#OFF').hide();
+$('#ON').show();
+} else {
+$('#ON').hide();
+$('#OFF').show();
+}
+});
+	
 $('#FormLogin').submit(function(){
 $('#FormLoading').modal('show'); 
-//$("#luan").modal("toggle");
 	
 // Variáveis Login
 var Login =$('#Login').val();
 var Passs =$('#Passs').val();
+if($('#Assistance').is(":checked")){
+var Assistance = "YES";
+} else {
+var Assistance = "NO";
+}
 
 $.ajax({
 url:  "OpLogin.php",
 type: "POST",
-data: {"Login" : Login, "Passs" : Passs},
+data: {"Login" : Login, "Passs" : Passs, "Assistance" : Assistance},
 success: function (result) {
 console.log(result);
 if(result == 0){	
@@ -164,36 +369,3 @@ location.href = 'index.php'
 return false;
 })})
 </script>
-
-<!--
-<div class="mx-auto mt-5 mb-5 container-fluid collapse" id="Social">
-<div class="row row-cols-1 justify-content-sm-center">
-	
-<div class="col-sm-2">
-	<button type="button" class="Amazon btn btn-block btn-lg">
-	<span><i class="fab fa-2x fa-amazon mr-2 ml-2 mt-2 mb-2"></i></span>	
-	Amazon
-	</button>
-</div>
-	
-<div class="col-sm-2 mb-2 mt-2"><button type="button" class="Facebook btn btn-block btn-lg"><div><i class="fab fa-2x fa-facebook mr-2"></i>Facebook</button></div>
-<div class="col-sm-2 mb-2 mt-2"><button type="button" class="Twitter btn btn-block btn-lg"><div><i class="fab fa-2x fa-twitter mr-2"></i>Twitter</button></div>	
-<div class="col-sm-2 mb-2 mt-2"><button type="button" class="Google btn btn-block btn-lg"><div><i class="fab fa-2x fa-google mr-2"></i>Google</button></div>	
-<div class="col-sm-2 mb-2 mt-2"><button type="button" class="Microsoft btn btn-block btn-lg"><div><i class="fab fa-2x fa-microsoft mr-2"></i>Microsoft</button></div>					
-</div>		
-</div>	
--->
-
-	
-<script>
-$(document).ready(function(){
-$(".LoginC").click(function(){
-$("#Social").collapse('hide');
-$("#LoginC").collapse('show');	
-});
-$(".Social").click(function(){
-$("#LoginC").collapse('hide');
-$("#Social").collapse('show');	
-});	
-});
-</script>	

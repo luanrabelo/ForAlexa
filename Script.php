@@ -30,6 +30,9 @@ var length = wrapper.find("input:text").length;
 if (x < max_fields) 
 { //max input box allowed
 x++; //text box increment
+if (x < 1){
+document.getElementById('luan').innerHTML = 0;	
+}	
 if (x > 0){	
 document.getElementById('luan').innerHTML = x;
 document.getElementById('qtde_quotes').value = x;	

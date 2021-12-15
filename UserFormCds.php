@@ -63,13 +63,36 @@
 <div class="input-group-text"><i class="fas fa-2x fa-key"></i>
 </div>	
 </div>
-<input name="Password" type="Password" required="required" class="form-control form-control-lg mx-auto" id="Password">	
+<input name="Password" type="Password" required="required" class="form-control form-control-lg mx-auto" id="Password">
+<div class="input-group-append">
+<div class="input-group-text">	
+<i id="Eye" class="fas fa-2x fa-eye" onClick="PassShow()"></i>
+</div>	
+</div>	
 </div>	
 </div>	
 
-	
-<button type="submit" class="btn btn-primary btn-lg btn-block">Sign Up<i class="fas fa-2x fa-sign-in-alt ml-3"></i></button>
+<button type="submit" class="btn btn-primary btn-lg btn-block">Sign Up ForAlexa</button>
 <div>
 </div>	
 </form>
 </div>
+<script>
+$(document).ready(function(){	
+$('html, body').animate({ scrollTop: 150  }, 3);
+});
+</script>
+<script>
+function PassShow() {
+var x = document.getElementById("Password");
+if (x.type === "password") {
+x.type = "text";
+$("#Eye").removeClass("fa-eye");
+$("#Eye").addClass("fa-eye-slash");
+} else {
+x.type = "password";
+$("#Eye").removeClass("fa-eye-slash");
+$("#Eye").addClass("fa-eye");
+}
+} 
+</script>

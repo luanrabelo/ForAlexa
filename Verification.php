@@ -17,7 +17,7 @@ $num_rows 	= mysqli_num_rows($search);
 if(!$num_rows > 0){
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `KeyUser`, `idRepository`) VALUES ('LaunchRequest', 'Welcome, you can say Hello or Help. Which would you like to try', '$KeyUser', '$idRepository')");
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(2);
+sleep(1);
 }
 	
 // HelpIntent	
@@ -26,7 +26,7 @@ $num_rows 	= mysqli_num_rows($search);
 if(!$num_rows > 0){
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `KeyUser`, `idRepository`) VALUES ('HelpIntent', 'You can say hello to me! How can I help?', '$KeyUser', '$idRepository')");
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(2);
+sleep(1);
 }	
 
 // CancelAndStopIntent	
@@ -35,7 +35,7 @@ $num_rows 	= mysqli_num_rows($search);
 if(!$num_rows > 0){
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `KeyUser`, `idRepository`) VALUES ('CancelAndStopIntent', 'So long and thanks for all the fish', '$KeyUser', '$idRepository')");
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(2);
+sleep(1);
 }	
 	
 // FallbackIntent	
@@ -44,7 +44,7 @@ $num_rows 	= mysqli_num_rows($search);
 if(!$num_rows > 0){
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `KeyUser`, `idRepository`) VALUES ('FallbackIntent', 'Sorry, I dont know about that. Please try again.', '$KeyUser', '$idRepository')");
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(2);
+sleep(1);
 }
 	
 // IntentReflector	
@@ -53,7 +53,7 @@ $num_rows 	= mysqli_num_rows($search);
 if(!$num_rows > 0){
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `KeyUser`, `idRepository`) VALUES ('IntentReflector', 'You just triggered', '$KeyUser', '$idRepository')");
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(2);
+sleep(1);
 }
 
 // Error	
@@ -62,7 +62,7 @@ $num_rows 	= mysqli_num_rows($search);
 if(!$num_rows > 0){
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `KeyUser`, `idRepository`) VALUES ('Error', 'Sorry, I had trouble doing what you asked. Please try again.', '$KeyUser', '$idRepository')");
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(2);
+sleep(1);
 }	
 
 // HelloWorldIntent	
@@ -80,7 +80,7 @@ $num_rows 	= mysqli_num_rows($search);
 if(!$num_rows > 0){
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `KeyUser`, `idRepository`) VALUES ('AMAZON.YesIntent', 'Customize Yes Intent', '$KeyUser', '$idRepository')");
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(2);
+sleep(1);
 }
 
 // AMAZON.NoIntent	
@@ -89,7 +89,7 @@ $num_rows 	= mysqli_num_rows($search);
 if(!$num_rows > 0){
 $sqli		= ("INSERT INTO `Questions` (`IntentName`, `answer`, `KeyUser`, `idRepository`) VALUES ('AMAZON.NoIntent', 'Customize No Intent', '$KeyUser', '$idRepository')");
 $querry 	= mysqli_query($mysqli, $sqli) or die (mysql_error($mysqli));
-sleep(2);
+sleep(1);
 }	
 echo 1;		
 }else{

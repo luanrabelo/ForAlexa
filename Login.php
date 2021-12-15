@@ -19,7 +19,8 @@ include("Texts.php");
 <meta property="og:description" content="<?php echo($Description);?>">
 <meta property="og:image" content="img/logo.jpg" />
 <meta name="author" content="Luan Rabelo">
-<link rel="stylesheet" href="ForAlexa.css">  	
+<link rel="stylesheet" href="ForAlexa.css">  
+
 </head>
 <body style="background-color: black;" class="text-center">		
 <div class="container-fluid mx-auto">
@@ -41,7 +42,6 @@ die (include_once 'PageNotFound.php');
 include("LoginForm.php");		
 }	
 ?>
-<?php //include("ads.php");?>	
 </main>	
 <footer class="text-white mt-5 mb-5 mx-auto">
 <div><p><?php echo($LastUpdate);?> | <?php echo($Version);?></p></div>

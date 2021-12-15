@@ -1,4 +1,5 @@
 <?php
+include("Connection.php");
 // Utterance 1
 if(isset($_POST['Utterance_1'])){
 if($_POST['Utterance_1'] <> ""){	

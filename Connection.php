@@ -1,5 +1,5 @@
 <?php
-$bd		= "";
+$bd			= "";
 $user 		= "";
 $pass	 	= "";
 $host 		= "";

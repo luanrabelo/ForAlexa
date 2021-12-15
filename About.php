@@ -1,14 +1,13 @@
-<div class="text-white w-75 mx-auto text-center mt-5" style="letter-spacing: 2px; font-size: 20px;">
-<div class="mt-5 mb-5"><h1>ForAlexa</h1></div>
-<div><?php echo($About);?></div>
+<div class="text-white w-75 mx-auto text-center mt-5" style="letter-spacing: 2px;">
+<div class="mt-5 mb-5 h1">ForAlexa</div>
+<div class="h2"><?php echo($About);?></div>
 <div class="mt-5 mb-5">
-<div>Luan Rabelo</div>
-<small class="text-muted">Developer</small>
+<div class="h3">Luan Rabelo</div>
+<small class="text-muted h6">Developer</small>
 </div>
-<hr class="text-center" width="50%" style="border: 1.5px solid black;">
+<hr class="text-center" width="75%" style="border: 1px solid white;">
 <div class="mt-5 mb-5">
-<div>Marcelo Vallinoto</div>
-<small class="text-muted">Developer / Collaborator</small>
+<div class="h3">Marcelo Vallinoto</div>
+<small class="text-muted h6">Developer / Collaborator</small>
 </div>
-
 </div>

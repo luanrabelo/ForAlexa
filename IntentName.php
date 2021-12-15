@@ -17,29 +17,65 @@ if($rand_keys == 0)	{
 </div>	
 <?php } ?>	
 
+<?php 
+$QA 			= mysqli_query($mysqli, "SELECT * FROM `Questions` WHERE KeyUser = '$KeyUser' AND idRepository = '$idRepository'");
+$num_rows_QA 	= mysqli_num_rows($QA);
+$RQ 			= mysqli_query($mysqli, "SELECT * FROM `RandomQuotes` WHERE KeyUser = '$KeyUser' AND idRepository = '$idRepository'");
+$num_rows_RQ 	= mysqli_num_rows($RQ);
+$num_rows 		= $num_rows_QA + $num_rows_RQ;
+
+if($_GET['Form'] == "QA" and $num_rows < 16){
+$KeyWords 	= array("Evolution", "Allele", "Dominance", "Recessive", "Microevolution", "Macroevolution");
+$query = ("SELECT * FROM `Questions` WHERE KeyUser = '$KeyUser' and idRepository = '$idRepository'");
+$result = $mysqli->query($query);
+while ($row = $result->fetch_assoc()) {
+foreach ($KeyWords as $key => $val){
+if ($val == $row["IntentName"]){
+unset($KeyWords[$key]);
+}
+}
+}	
+$RandKey 	= array_rand($KeyWords, 1);
+$Word 		= $KeyWords[$RandKey];
+} elseif($_GET['Form'] == "QA" and $num_rows > 15) {
+	$KeyWords 	= array("EvolutionIntent", "AlleleIntent", "RecessiveIntent", "DominanceIntent");
+	$RandKey 	= array_rand($KeyWords, 1);
+	$Word 		= $KeyWords[$RandKey];
+	}
+elseif($_GET['Form'] == "RandomQuotes" and $num_rows > 15) {
+	$KeyWords 	= array("RandomEvolution", "RandomGenetics", "RandomQuestions");
+	$RandKey 	= array_rand($KeyWords, 1);
+	$Word 		= $KeyWords[$RandKey];
+	}
+?>
 	
-<label class="text-white">Intent Name</label>	
+<label class="text-white h2">Intent Name</label>	
+<div class="text-white mb-2">You must give a name to your intent. Intents represent actions that users can do with skill. These intents represent the core functionality of skill. It is a dialog or a conversation with customers in which Alexa asks questions and the user responds with the answers.</div>
 <div class="input-group">
 <div class="input-group-prepend">
 <div class="input-group-text">
-<div id="Scroll"  style="display:flex"><i data-toggle="tooltip" data-placement="top" title="Insert a IntentName" 		class="fas fa-2x fa-scroll">		</i></div>	
-<div id="Success" style="display:none"><i data-toggle="tooltip" data-placement="top" title="IntentName available" 		class="fas fa-2x fa-check-circle">	</i></div>
-<div id="Danger"  style="display:none"><i data-toggle="tooltip" data-placement="top" title="IntentName not available" 	class="fas fa-2x fa-times-circle">	</i></div>	
+<div id="Scroll" style="display:flex" data-toggle="tooltip" data-placement="top" title="Insert a IntentName"><i class="fas fa-2x fa-scroll"></i></div>	
+<div id="Success" style="display:none" data-toggle="tooltip" data-placement="top" title="IntentName available"><i class="fas fa-2x fa-check-circle"></i></div>
+<div id="Danger" style="display:none" data-toggle="tooltip" data-placement="top" title="IntentName not available"><i class="fas fa-2x fa-times-circle"></i></div>	
 </div>
 </div>	
-<input name="IntentName" type="text" required="required" class="form-control form-control-lg" id="IntentName" onkeyup="verificar()" value="<?php if ($action == "Update") {echo($Intent);}?>" aria-describedby="IntentHelp" oninvalid="this.setCustomValidity('Field IntentName is required with minimum 5 characters')" oninput="setCustomValidity('')" minlength="5" <?php echo($delete);?>>
-<div class="input-group-append">
+<input name="IntentName" type="text" required="required" class="form-control form-control-lg" id="IntentName" placeholder="i.e. <?php echo($Word);?>" onkeyup="verificar()" value="<?php if ($action == "Update") {echo($Intent);}?>" aria-describedby="IntentHelp" oninvalid="this.setCustomValidity('Field IntentName is required with minimum 5 characters')" oninput="setCustomValidity('')" minlength="5" <?php echo($delete);?>>
+<?php if($_GET["Action"] != "Update"){ ?>
+<div style="cursor: pointer;" class="input-group-append" data-toggle="tooltip" data-placement="top" title="Click to add a Random Intent Name">
 <div class="input-group-text">	
 <i class="fas fa-2x fa-sync" onClick="getRandomString();"></i>
 </div>	
 </div>	
+<?php } ?>
 </div>
-<small id="IntentHelp" class="form-text mb-5 text-white"><i style="color: yellow;" class="fas fa-2x fa-exclamation-triangle mt-2"></i> Intent name can only contain case-insensitive alphabetic characters and underscores. Numbers, spaces, or other special characters are not allowed.</small>	
+
+<small id="IntentHelp" class="form-text mb-5 text-white"><?php if($_GET["Action"] != "Update" and $_GET["Form"] != "RandomQuotes"){echo('<i style="color: yellow;" class="fas fa-exclamation-triangle mr-1"></i>For instance, '.'"'.$Word.'" or click in <i style="color: white; cursor: pointer;" class="fas fa-sync" onClick="getRandomString();"></i> to add a Random Intent Name<br>');} ?><i style="color: yellow;" class="fas fa-exclamation-triangle mr-1"></i>Note that Intent name can only contain case-insensitive alphabetic characters and underscores. Numbers, spaces, or other special characters are not allowed.<?php if($_GET["Form"] == "RandomQuotes"){ echo("<br>".'<i style="color: yellow;" class="fas fa-exclamation-triangle mr-1"></i>'."This Intent Name cannot be changed.");}?></small>	
 </div>
 </div>	
 
 <script language="javascript">
-var IntentName = $("#IntentName");	
+var IntentName = $("#IntentName");
+if(IntentName.val() != "LaunchRequest"){
 IntentName.blur(function() { 	
 $.ajax({ 	
 url: 'Intent.php', 
@@ -55,4 +91,5 @@ $('#Danger').hide();
 $(data.Icon).show();
 }});
 }); 
+}
 </script>	

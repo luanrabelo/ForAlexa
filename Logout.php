@@ -1,5 +1,4 @@
 <?php
-//session_save_path('/home/luanrabelo2/tmp');
 session_start();
 $Token 	= md5(session_id());
 
